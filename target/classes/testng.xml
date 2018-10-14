@@ -24,7 +24,6 @@
 		<class name = "com.att.testcases.BillingSummaryReportExampleTest"> </class>
 		<class name = "com.att.testcases.ChooseReportToCreateTest"> </class>
 
- 
  	</classes>
 </test>
 </suite>
