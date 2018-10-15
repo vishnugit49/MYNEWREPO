@@ -13,7 +13,8 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -196,7 +197,17 @@ public class BaseTest {
 
 	}
 
-
+	//Method: to switchTo - ALert() or Frame()
+	public static void switchToAlertOrFrame() {
+					try {
+						driver.switchTo().alert();
+						driver.switchTo().frame(0);
+					}catch(NoAlertPresentException e) {
+						e.printStackTrace();
+					}catch(NoSuchFrameException e) {
+						e.printStackTrace();
+					}
+	}
 	
 	
 }

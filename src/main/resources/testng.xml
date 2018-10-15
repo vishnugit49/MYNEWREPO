@@ -26,6 +26,7 @@
 
 	<!--    <class name = "com.att.testcases.ChooseReportToCreateTest"> </class> --> 
 	<!--    <class name = "com.att.testcases.ChooseReportToCreateTest"> </class> LOVELY--> 
+	
  	</classes>
 </test>
 </suite>
