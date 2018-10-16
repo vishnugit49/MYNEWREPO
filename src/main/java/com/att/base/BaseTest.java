@@ -197,17 +197,23 @@ public class BaseTest {
 
 	}
 
-	//Method: to switchTo - ALert() or Frame()
-	public static void switchToAlertOrFrame() {
+	//Method: to switchTo - ALert()
+	public static void switchToAlert() {
 					try {
 						driver.switchTo().alert();
-						driver.switchTo().frame(0);
 					}catch(NoAlertPresentException e) {
-						e.printStackTrace();
-					}catch(NoSuchFrameException e) {
 						e.printStackTrace();
 					}
 	}
+	
+	//Method: to switchTo - Frame()
+		public static void switchToFrame() {
+						try {
+							driver.switchTo().frame(0);
+						}catch(NoSuchFrameException e) {
+							e.printStackTrace();
+						}
+		}
 	
 	
 }
