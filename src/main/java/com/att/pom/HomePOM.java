@@ -110,12 +110,14 @@ public class HomePOM extends BaseTest{
 		}
 	}
 	
+	//This methods is used to get ChildWindow Title of NewIcon.
 	public String validateClickOnNewIconGetTitleFromChildWindow() {
 		AttNewIcon.click();
 		String x = getTitleAndCloseChildWindow();
 		return x;
 	}
 
+	//This methods is used to get ChildWindow Text of the title in NewIcon.
 	public String validateClickOnNewIconGetTitleTextAndCloseChildWindow() {
 		AttNewIcon.click();
 		String x = getTextAndCloseChildWindow(AttChildWindowTitle);
