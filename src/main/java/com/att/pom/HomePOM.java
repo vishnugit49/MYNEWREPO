@@ -31,6 +31,12 @@ public class HomePOM extends BaseTest{
 	@FindBy(xpath="//a[@class='content reports']")
 	WebElement AttReportsTab;
 	
+	@FindBy(xpath="//a[@class='dashedLink']")
+	WebElement AttNewIcon;
+	
+	@FindBy(xpath="//td[contains(text(),'Create New Tasks')]")
+	WebElement AttChildWindowTitle;
+	
 	String settingsMainMenuXpath ="//div[@class='popup_menu_icon settings_icon']";
 	String settingsSubLeaveType ="//a[text()='Leave Types']";
 	String settingsSubBillingType ="//a[text()='Billing Types']";
@@ -104,7 +110,16 @@ public class HomePOM extends BaseTest{
 		}
 	}
 	
+	public String validateClickOnNewIconGetTitleFromChildWindow() {
+		AttNewIcon.click();
+		String x = getTitleAndCloseChildWindow();
+		return x;
+	}
 
-	
+	public String validateClickOnNewIconGetTitleTextAndCloseChildWindow() {
+		AttNewIcon.click();
+		String x = getTextAndCloseChildWindow(AttChildWindowTitle);
+		return x;
+	}
 	
 }

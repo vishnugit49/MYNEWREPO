@@ -152,6 +152,7 @@ public class BaseTest {
 
 	}
 	
+	
 	//Method: to switchTo - Child Window get Window title and close.
 	public String getTitleAndCloseChildWindow() {
 		String x = null;

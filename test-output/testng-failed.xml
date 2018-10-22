@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.att.testcases.BillingSummaryReportExampleTest">
+      <class name="com.att.testcases.HomeTest">
         <methods>
-          <include name="validateSwitchToSectionListItemsAndHeading"/>
-          <include name="setUp"/>
+          <include name="verifyClickOnNewIcon"/>
+          <include name="setUP"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.att.testcases.BillingSummaryReportExampleTest -->
+      </class> <!-- com.att.testcases.HomeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

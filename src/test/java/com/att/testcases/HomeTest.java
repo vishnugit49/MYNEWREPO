@@ -77,6 +77,18 @@ public class HomeTest extends BaseTest{
 		Assert.assertEquals(x, "Logo & Color Scheme","Page Name Mismatch");
 	}
 	
+	@Test
+	public void verifyClickOnNewIcon() {
+		String x = homePOM.validateClickOnNewIconGetTitleFromChildWindow();
+		Assert.assertEquals(x, "actiTIME - Create New Tasks","ChildWindow Title Mismatch");
+	}
+	
+	@Test
+	public void verifyChickOnNewIconAndChildWindowTitle() {
+		String x = homePOM.validateClickOnNewIconGetTitleTextAndCloseChildWindow();
+		Assert.assertEquals(x, " Create New Tasks","ChildWindow Title Text Mismatch");
+	}
+	
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();

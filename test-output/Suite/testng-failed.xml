@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="IETest(failed)">
+    <parameter name="browser" value="FF"/>
+    <classes>
+      <class name="com.att.testcases.LoginTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="AttImgeLogoTest"/>
+          <include name="setUp"/>
+          <include name="AttKeepLoginTest"/>
+          <include name="AttLicLinkTest"/>
+          <include name="AttLoginTest"/>
+        </methods>
+      </class> <!-- com.att.testcases.LoginTest -->
+    </classes>
+  </test> <!-- IETest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
