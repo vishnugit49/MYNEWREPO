@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.att.testcases.HomeTest">
+      <class name="com.att.testcases.CreateNewTasksTest">
         <methods>
-          <include name="verifyClickOnNewIcon"/>
-          <include name="setUP"/>
           <include name="tearDown"/>
+          <include name="verify_Task_Create_Without_Customer_and_Project"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.att.testcases.HomeTest -->
+      </class> <!-- com.att.testcases.CreateNewTasksTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

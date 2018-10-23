@@ -1,5 +1,11 @@
 package com.att.base;
 
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.StringSelection;
+import java.awt.datatransfer.Transferable;
+import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -12,6 +18,7 @@ import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchFrameException;
@@ -207,6 +214,16 @@ public class BaseTest {
 					}
 	}
 	
+	//Method: to switchTo - ALert() and Accept.
+	public static void switchToAlertAndAccept() {
+					try {
+						Alert a = driver.switchTo().alert();
+						a.accept();
+					}catch(NoAlertPresentException e) {
+						e.printStackTrace();
+					}
+	}
+	
 	//Method: to switchTo - Frame()
 		public static void switchToFrame() {
 						try {
@@ -216,5 +233,26 @@ public class BaseTest {
 						}
 		}
 	
-	
+	//getClipboard string (it gives cntr+c data/string in return)
+		public String getClipboardText(){
+			String x = null;
+			try {
+				Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+				Transferable contents = clipboard.getContents(null);
+				x = (String) contents.getTransferData(DataFlavor.stringFlavor);
+				return x;
+				
+			}catch(UnsupportedFlavorException e) {
+				e.printStackTrace();
+			}catch(IOException e) {
+				e.printStackTrace();
+			}
+			return x;
+		}
+		
+	//clearClipboard string (it set Clipboard as null)
+		public void clearClipboardText() {
+			StringSelection stringSelection = new StringSelection("");
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+		}
 }
